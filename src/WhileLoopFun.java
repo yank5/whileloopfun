@@ -64,14 +64,12 @@ public class WhileLoopFun {
      Precondition: number > 0, threshold > 0
      */
     public int maxDoubles(int number, int threshold) {
-        int x = 2;
-        int count = 1;
-        while(number*x<threshold){
-            count++;
-            x*=count;
+        int count = 0;
+        while(number*2<=threshold){
+            number*=2;
+            ++count;
         }
         return count;
-
     }
 
     /**Returns true if number is prime (i.e. it has exactly two divisors: 1 and itself) and false
